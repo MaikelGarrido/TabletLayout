@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="*">
+
+    <TableRow>
+
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="90dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/operador"
+            android:layout_width="90dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Operador"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/plan"
+            android:layout_width="180dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Plan"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cargo_fijo"
+            android:layout_width="90dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Cargo Fijo"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/datos_movil"
+            android:layout_width="90dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Datos Movil"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/minutos_plan"
+            android:layout_width="90dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Minutos Plan"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+</TableLayout>
+

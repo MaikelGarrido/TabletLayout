@@ -4,9 +4,12 @@ public class Country {
     private String sISOCode;
     private String sName;
 
+    private Boolean isSelected;
+
     public Country(String sISOCode, String sName) {
         this.sISOCode = sISOCode;
         this.sName = sName;
+        this.isSelected = false;
     }
 
     public String getsISOCode() {
@@ -23,6 +26,14 @@ public class Country {
 
     public void setsName(String sName) {
         this.sName = sName;
+    }
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
     }
 }
 

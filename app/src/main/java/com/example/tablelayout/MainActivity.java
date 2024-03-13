@@ -1,5 +1,6 @@
 package com.example.tablelayout;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,7 +43,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Iniciando TableLayout
+        initTabletLayout();
+
+        // Iniciando Botón
         initButton();
+
+        // Verificando si la lista no está vacía
+        if (!countries.isEmpty()) { setupRecyclerView(); }
+
     }
 
     // Iniciar configuración de Adapter
@@ -50,7 +60,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         countryAdapter = new CountryAdapter(this, countries, country -> {
-            Toast.makeText(this, country.getsName(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, CountryDetails.class);
+            startActivity(intent);
+            //finish();
         });
         recyclerView.setAdapter(countryAdapter);
     }
@@ -97,9 +109,6 @@ public class MainActivity extends AppCompatActivity {
     void initButton() {
         button = findViewById(R.id.button);
         button.setOnClickListener(v -> {
-            // Iniciando TableLayout
-            initTabletLayout();
-
             // Llamando web service
             initWebService();
         });

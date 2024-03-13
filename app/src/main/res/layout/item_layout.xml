@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:stretchColumns="*">
 
-    <TableRow>
+    <TableRow
+        android:id="@+id/tableRow">
 
         <CheckBox
             android:id="@+id/check_box"
